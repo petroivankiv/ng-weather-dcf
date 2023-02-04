@@ -7,9 +7,10 @@ import { AppService } from 'src/app/app.service';
 import { AppComponent } from './app.component';
 import { WEATHER_CONFIG, WEATHER_DI_CONFIG } from 'src/app/weather.config';
 import { BackgroundComponent } from './background/background.component';
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
 
 @NgModule({
-  declarations: [AppComponent, BackgroundComponent],
+  declarations: [AppComponent, BackgroundComponent, GoogleMapsComponent],
   imports: [BrowserModule, HttpClientModule],
   providers: [
     AppService,
