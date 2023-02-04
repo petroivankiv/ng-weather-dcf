@@ -10,10 +10,6 @@ import { IWeatherConfig, WEATHER_CONFIG } from 'src/app/weather.config';
   providedIn: 'root',
 })
 export class AppService {
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-  };
-
   constructor(
     private http: HttpClient,
     @Inject(WEATHER_CONFIG) private config: IWeatherConfig

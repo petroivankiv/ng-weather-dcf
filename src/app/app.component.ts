@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { Observable, Subject } from 'rxjs';
 import {
-   debounceTime, distinctUntilChanged, switchMap
+   debounceTime, distinctUntilChanged, switchMap, filter
  } from 'rxjs/operators';
 
 import { AppService } from 'src/app/app.service';
@@ -28,6 +28,7 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.weather$ = this.searchTerms.pipe(
+      filter(query => query?.length > 3),
       debounceTime(300),
       distinctUntilChanged(),
       switchMap((term: string) => this.appService.getCurrentWeather(term)),
