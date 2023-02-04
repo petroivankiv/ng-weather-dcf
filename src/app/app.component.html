@@ -12,5 +12,7 @@
   <h2>Прогноз погоди</h2>
   <p>Тут будуть відображатись дані для вашого міста</p>
 
-  <ng-template *ngIf="weather$ | async"></ng-template>
+  <app-weather-content
+    [weatherApiData]="weather$ | async"
+  ></app-weather-content>
 </div>

@@ -1,0 +1,23 @@
+<div *ngIf="weatherApiData">
+  <mat-list>
+    <div mat-subheader>{{ weatherApiData.name }}</div>
+    <mat-list-item>
+      <div matListItemTitle>Часова зона</div>
+      <div matListItemLine>{{ weatherApiData.timezone }}</div>
+    </mat-list-item>
+    <mat-list-item>
+      <div matListItemTitle>Температура</div>
+      <div matListItemLine>{{ weatherApiData.main.temp }}</div>
+    </mat-list-item>
+    <mat-list-item>
+      <div matListItemTitle>Швидкість вітру</div>
+      <div matListItemLine>{{ weatherApiData.wind.speed }}</div>
+    </mat-list-item>
+    <mat-list-item>
+      <div matListItemTitle>Напрям вітру</div>
+      <div matListItemLine>{{ weatherApiData.wind.deg }}</div>
+    </mat-list-item>
+  </mat-list>
+</div>
+
+<ng-template *ngIf="!weatherApiData">Немає даних</ng-template>
