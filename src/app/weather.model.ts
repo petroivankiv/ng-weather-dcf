@@ -11,7 +11,7 @@ export interface WeatherApiData {
   main: {
     temp: number;
     feels_like: number;
-    preassure: number;
+    pressure: number;
     humidity: number;
     sea_level: number;
   };
