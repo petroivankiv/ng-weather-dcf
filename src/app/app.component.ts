@@ -9,7 +9,7 @@ import {
 } from 'rxjs/operators';
 
 import { AppService } from 'src/app/app.service';
-import { ICity, WeatherApiData } from 'src/app/weather.model';
+import { WeatherApiData } from 'src/app/weather.model';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +20,6 @@ export class AppComponent {
   title = 'Weather API';
 
   weather$!: Observable<WeatherApiData>;
-  cities$!: Observable<ICity[]>;
 
   private searchTerms = new Subject<string>();
 
@@ -37,7 +36,5 @@ export class AppComponent {
       distinctUntilChanged(),
       switchMap((term: string) => this.appService.getCurrentWeather(term))
     );
-
-    this.cities$ = this.appService.getCityList();
   }
 }

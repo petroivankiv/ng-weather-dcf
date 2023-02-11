@@ -3,8 +3,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { catchError, map } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
-import { ICity, WeatherApiData } from 'src/app/weather.model';
+
+import { WeatherApiData } from 'src/app/weather.model';
 import { IWeatherConfig, WEATHER_CONFIG } from 'src/app/weather.config';
+import { ICity } from 'src/app/autocomplete/autocomplete.component';
 
 @Injectable({
   providedIn: 'root',
@@ -24,7 +26,7 @@ export class AppService {
       .pipe(catchError(this.handleError<WeatherApiData>({} as WeatherApiData)));
   }
 
-   /** GET list of cities */
+  /** GET list of cities */
   public getCityList(): Observable<ICity[]> {
     return this.http
       .get('assets/city.list.json')

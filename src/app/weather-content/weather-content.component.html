@@ -1,4 +1,4 @@
-<div id="weather-content" *ngIf="weatherApiData">
+<div class="weather-content" id="weather-content" *ngIf="weatherApiData">
   <app-table [dataSource]="sysData" [columns]="sysColumns"></app-table>
   <app-table [dataSource]="mainData" [columns]="mainColumns"></app-table>
   <app-table [dataSource]="windData" [columns]="windColumns"></app-table>

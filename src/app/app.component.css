@@ -33,23 +33,3 @@ p {
   flex-direction: column;
   align-items: center;
 }
-
-.search-box {
-  height: 30px;
-  width: 400px;
-  margin: 35px 0 10px 0;
-  border-radius: 15px;
-  padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  outline: 0 none;
-  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
-  border-color: rgba(223, 225, 229, 0);
-}
-
-.search-box:focus {
-  border-color: rgba(229, 103, 23, 0.8);
-  box-shadow: 0 1px 1px rgba(40, 23, 189, 0.075) inset,
-    0 0 8px rgba(37, 23, 229, 0.6);
-  outline: 0 none;
-}

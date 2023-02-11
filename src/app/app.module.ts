@@ -1,9 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppService } from 'src/app/app.service';
 
@@ -13,6 +19,7 @@ import { BackgroundComponent } from './background/background.component';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { WeatherContentComponent } from './weather-content/weather-content.component';
 import { TableComponent } from './table/table.component';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +28,20 @@ import { TableComponent } from './table/table.component';
     GoogleMapsComponent,
     WeatherContentComponent,
     TableComponent,
+    AutocompleteComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     MatListModule,
     MatIconModule,
     MatTableModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [
     AppService,

@@ -1,12 +1,7 @@
 <div class="content" role="main">
   <app-background [title]="title"></app-background>
 
-  <input
-    #searchBox
-    id="search-box"
-    class="search-box"
-    (input)="search(searchBox.value)"
-  />
+  <app-autocomplete (search)="search($event)"></app-autocomplete>
 
   <!-- Resources -->
   <h2>Прогноз погоди</h2>
