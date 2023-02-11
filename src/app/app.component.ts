@@ -2,21 +2,25 @@ import { Component } from '@angular/core';
 
 import { Observable, Subject } from 'rxjs';
 import {
-   debounceTime, distinctUntilChanged, switchMap, filter
- } from 'rxjs/operators';
+  debounceTime,
+  distinctUntilChanged,
+  switchMap,
+  filter,
+} from 'rxjs/operators';
 
 import { AppService } from 'src/app/app.service';
-import { WeatherApiData } from 'src/app/weather.model';
+import { ICity, WeatherApiData } from 'src/app/weather.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'Weather API';
 
   weather$!: Observable<WeatherApiData>;
+  cities$!: Observable<ICity[]>;
 
   private searchTerms = new Subject<string>();
 
@@ -28,10 +32,12 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.weather$ = this.searchTerms.pipe(
-      filter(query => query?.length > 3),
+      filter((query) => query?.length > 3),
       debounceTime(300),
       distinctUntilChanged(),
-      switchMap((term: string) => this.appService.getCurrentWeather(term)),
+      switchMap((term: string) => this.appService.getCurrentWeather(term))
     );
+
+    this.cities$ = this.appService.getCityList();
   }
 }

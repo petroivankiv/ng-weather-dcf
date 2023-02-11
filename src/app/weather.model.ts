@@ -16,3 +16,9 @@ export interface WeatherApiData {
     sea_level: number;
   };
 }
+
+export interface ICity {
+  id: number;
+  name: string;
+  country: string;
+}

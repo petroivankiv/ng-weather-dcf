@@ -1,9 +1,9 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
-import { WeatherApiData } from 'src/app/weather.model';
+import { ICity, WeatherApiData } from 'src/app/weather.model';
 import { IWeatherConfig, WEATHER_CONFIG } from 'src/app/weather.config';
 
 @Injectable({
@@ -22,6 +22,17 @@ export class AppService {
     return this.http
       .get<WeatherApiData>(weatherApiUrl)
       .pipe(catchError(this.handleError<WeatherApiData>({} as WeatherApiData)));
+  }
+
+   /** GET list of cities */
+  public getCityList(): Observable<ICity[]> {
+    return this.http
+      .get('assets/city.list.json')
+      .pipe(
+        map((cities: any) =>
+          cities.map(({ id, name, country }: ICity) => ({ id, name, country }))
+        )
+      );
   }
 
   /**
