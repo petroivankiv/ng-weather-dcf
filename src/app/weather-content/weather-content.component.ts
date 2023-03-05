@@ -5,7 +5,7 @@ import { WeatherApiData } from 'src/app/weather.model';
 @Component({
   selector: 'app-weather-content',
   templateUrl: './weather-content.component.html',
-  styleUrls: ['./weather-content.component.css'],
+  styleUrls: ['./weather-content.component.scss'],
 })
 export class WeatherContentComponent implements OnChanges {
   mainData: Record<string, string | number>[] = [];
