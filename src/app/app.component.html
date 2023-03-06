@@ -1,13 +1,29 @@
-<div class="content" role="main">
-  <app-background [title]="title"></app-background>
+<div class="main">
+  <!-- header -->
+  <mat-toolbar>
+    <span>My App</span>
+    <span class="spacer"></span>
+    <button
+      mat-icon-button
+      (click)="toggleDarkTheme()"
+      class="theme-toggle"
+      aria-label="Toggle Dark Theme"
+    >
+      <mat-icon [fontIcon]="isDark ? 'dark_mode' : 'light_mode'"></mat-icon>
+    </button>
+  </mat-toolbar>
 
-  <app-autocomplete (search)="search($event)"></app-autocomplete>
+  <!-- content -->
+  <div class="content" role="main">
+    <app-background [title]="title"></app-background>
+    <app-autocomplete (search)="search($event)"></app-autocomplete>
 
-  <!-- Resources -->
-  <h2>Прогноз погоди</h2>
-  <p>Тут будуть відображатись дані для вашого міста</p>
+    <!-- Resources -->
+    <h2>Прогноз погоди</h2>
+    <p>Тут будуть відображатись дані для вашого міста</p>
 
-  <app-weather-content
-    [weatherApiData]="weather$ | async"
-  ></app-weather-content>
+    <app-weather-content
+      [weatherApiData]="weather$ | async"
+    ></app-weather-content>
+  </div>
 </div>

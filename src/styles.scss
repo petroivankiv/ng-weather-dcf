@@ -1,2 +1,19 @@
+@use "@angular/material" as mat;
+
+@use "./styles/themes/light";
+
+// to use material icons
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@include mat.all-component-themes(light.$my-app-light-theme);
+
+// use a specific module to reduce css bundle
+// @include mat.core-theme($my-app-theme);
+// @include mat.button-theme($my-app-theme);
+
+body {
+    margin: 0;
+}
