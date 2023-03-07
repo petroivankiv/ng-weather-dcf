@@ -12,7 +12,6 @@ import {
   WEATHER_DI_CONFIG,
 } from 'src/app/config/weather.config';
 import { CoreModule } from 'src/app/core/core.module';
-import { MaterialModule } from 'src/app/material/material.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +21,6 @@ import { MaterialModule } from 'src/app/material/material.module';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule,
     CoreModule,
   ],
   providers: [
