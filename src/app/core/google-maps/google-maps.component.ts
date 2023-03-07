@@ -1,7 +1,7 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 
 import { Loader } from '@googlemaps/js-api-loader';
-import { IWeatherConfig, WEATHER_CONFIG } from 'src/app/weather.config';
+import { IWeatherConfig, WEATHER_CONFIG } from 'src/app/config/weather.config';
 import { WeatherApiData } from 'src/app/weather.model';
 
 @Component({

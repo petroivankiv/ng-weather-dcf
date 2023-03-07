@@ -1,4 +1,4 @@
-@use "../../app/background/background-theme" as background;
+@use "../../app/core/background/background-theme" as background;
 
 @mixin theme($theme) {
   @include background.theme($theme);

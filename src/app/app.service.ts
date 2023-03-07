@@ -5,8 +5,8 @@ import { catchError, map } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 
 import { WeatherApiData } from 'src/app/weather.model';
-import { IWeatherConfig, WEATHER_CONFIG } from 'src/app/weather.config';
-import { ICity } from 'src/app/autocomplete/autocomplete.component';
+import { IWeatherConfig, WEATHER_CONFIG } from 'src/app/config/weather.config';
+import { ICity } from 'src/app/core/autocomplete/autocomplete.component';
 
 @Injectable({
   providedIn: 'root',
