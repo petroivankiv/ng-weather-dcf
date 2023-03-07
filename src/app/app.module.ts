@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppService } from 'src/app/app.service';
@@ -17,8 +16,6 @@ import { CoreModule } from 'src/app/core/core.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
