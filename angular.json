@@ -25,7 +25,7 @@
         "sourceLocale": "en-US",
         "locales": {
           "ua": {
-            "translation": "src/locale/messages.ua.xlf"
+            "translation": "src/locale/messages.ua.json"
           }
         }
       },
