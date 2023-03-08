@@ -7,6 +7,7 @@ import { WeatherContentComponent } from './weather-content/weather-content.compo
 import { TableComponent } from './table/table.component';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { HeaderComponent } from './header/header.component';
+import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/material/material.module';
@@ -18,6 +19,7 @@ const components = [
   TableComponent,
   GoogleMapsComponent,
   HeaderComponent,
+  LanguageSelectorComponent,
 ];
 
 @NgModule({

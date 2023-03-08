@@ -1,11 +1,11 @@
 {
   "locale": "en-US",
   "translations": {
-    "5475172236600704039": "Whether Forecast",
+    "4171328631857444366": "Weather Forecast",
     "938506622454701442": "Here you will see data for your city",
     "9211144034861875518": "Cities",
     "5592083557831215796": "Welcome to {$INTERPOLATION}",
-    "6929233731667391506": "Whether",
+    "5653202483299129380": "Weather",
     "1205971791613621899": "There is no data"
   }
 }

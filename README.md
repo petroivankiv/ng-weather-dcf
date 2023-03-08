@@ -28,3 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Google maps
 Use this guide to use maps [Google Maps](https://github.com/angular/components/blob/main/src/google-maps/README.md)
+
+## Localizations
+Language switcher works only for production mode
