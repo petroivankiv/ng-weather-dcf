@@ -21,6 +21,14 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ua": {
+            "translation": "src/locale/messages.ua.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -47,6 +55,12 @@
             "scripts": []
           },
           "configurations": {
+            "en-US": {
+              "localize": ["en-US"]
+            },
+            "ua": {
+              "localize": ["ua"]
+            },
             "production": {
               "budgets": [
                 {
@@ -76,6 +90,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "en-US": {
+              "browserTarget": "ng-weather-dcf:build:development,en-US"
+            },
+            "ua": {
+              "browserTarget": "ng-weather-dcf:build:development,ua"
+            },
             "production": {
               "browserTarget": "ng-weather-dcf:build:production"
             },

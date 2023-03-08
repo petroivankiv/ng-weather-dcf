@@ -4,4 +4,4 @@
   <app-table [dataSource]="windData" [columns]="windColumns"></app-table>
 </div>
 
-<ng-template *ngIf="!weatherApiData">Немає даних</ng-template>
+<ng-template *ngIf="!weatherApiData" i18n>There is no data</ng-template>

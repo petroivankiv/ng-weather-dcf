@@ -17,8 +17,6 @@ import { WeatherApiData } from 'src/app/weather.model';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Вітаємо';
-
   weather$!: Observable<WeatherApiData>;
 
   private searchTerms = new Subject<string>();

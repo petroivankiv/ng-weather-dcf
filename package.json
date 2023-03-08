@@ -4,12 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "start:ua": "ng serve --configuration=ua",
+    "build": "ng build --localize",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "extract-i18n": "ng extract-i18n --output-path=src/locale --format=xlf"
   },
   "private": true,
   "dependencies": {
@@ -32,8 +34,10 @@
     "@angular-devkit/build-angular": "^15.1.4",
     "@angular/cli": "~15.1.4",
     "@angular/compiler-cli": "^15.1.0",
+    "@angular/localize": "^15.1.3",
     "@cypress/schematic": "^2.5.0",
     "@types/jasmine": "~4.3.0",
+    "cypress": "latest",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -42,7 +46,6 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "stylelint": "^15.1.0",
     "stylelint-config-standard": "^30.0.1",
-    "typescript": "~4.9.4",
-    "cypress": "latest"
+    "typescript": "~4.9.4"
   }
 }

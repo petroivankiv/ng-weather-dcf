@@ -4,12 +4,12 @@
 
   <!-- content -->
   <div class="content" role="main">
-    <app-background [title]="title"></app-background>
+    <app-background></app-background>
     <app-autocomplete (search)="search($event)"></app-autocomplete>
 
     <!-- Resources -->
-    <h2>Прогноз погоди</h2>
-    <p>Тут будуть відображатись дані для вашого міста</p>
+    <h2 i18n>Whether Forecast</h2>
+    <p i18n>Here you will see data for your city</p>
 
     <app-weather-content
       [weatherApiData]="weather$ | async"
