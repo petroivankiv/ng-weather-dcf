@@ -40,7 +40,6 @@ export class AutocompleteComponent implements OnInit {
       debounceTime(500),
       distinctUntilChanged(),
       map(([value, cities]) => {
-        console.log({ value });
         const options = (cities as ICity[]) || [];
         const name: string =
           typeof value === 'string' ? value : (value as ICity)?.name;

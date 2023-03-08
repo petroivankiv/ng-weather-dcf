@@ -1,5 +1,9 @@
 import { InjectionToken } from '@angular/core';
 
+// variables are defined in the .env file
+declare const WEATHER_API_KEY: string;
+declare const WEATHER_API_URL: string;
+
 export interface IWeatherConfig {
   apiKey: string;
   url: string;
@@ -7,9 +11,11 @@ export interface IWeatherConfig {
 }
 
 export const WEATHER_DI_CONFIG: IWeatherConfig = {
-  apiKey: '599b6413eba31abc97bf7d30f27332c8',
-  url: 'https://api.openweathermap.org/data/2.5/weather',
+  apiKey: WEATHER_API_KEY,
+  url: WEATHER_API_URL,
   googleMapApiKey: '',
-}
+};
 
-export const WEATHER_CONFIG = new InjectionToken<IWeatherConfig>('weather.config');
+export const WEATHER_CONFIG = new InjectionToken<IWeatherConfig>(
+  'weather.config'
+);
