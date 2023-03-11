@@ -1,6 +1,7 @@
 {
   "name": "ng-weather-dcf",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,10 +12,12 @@
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "extract-i18n": "ng extract-i18n --output-path=src/locale --format=json"
+    "extract-i18n": "ng extract-i18n --output-path=src/locale --format=json",
+    "count-lines": "node ./scripts/count-lines.js"
   },
   "private": true,
   "dependencies": {
+    "-": "^0.0.1",
     "@angular/animations": "^15.1.0",
     "@angular/common": "^15.1.0",
     "@angular/compiler": "^15.1.0",
@@ -29,6 +32,7 @@
     "dotenv": "^16.0.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "yargs": "^17.7.1",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
@@ -40,6 +44,8 @@
     "@cypress/schematic": "^2.5.0",
     "@types/jasmine": "~4.3.0",
     "@types/node": "^18.14.6",
+    "boxen": "^7.0.2",
+    "chalk": "^5.2.0",
     "cypress": "latest",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
