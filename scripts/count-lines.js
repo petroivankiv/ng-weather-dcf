@@ -12,9 +12,7 @@ import yargs from "yargs/yargs";
 const argv = yargs(process.argv.slice(2))
   .usage(chalk.magenta("Usage: $0 <command> [options]"))
   .command(chalk.green("count"), chalk.cyan("Count the lines in a file"))
-  .example(
-    chalk.magenta("$0 count -f foo.js", "count the lines in the given file")
-  )
+  .example(chalk.magenta("$0 count -f foo.js"))
   .alias("f", "file")
   .nargs("f", 1)
   .describe("f", "Load a file")
