@@ -40,12 +40,12 @@ export class AutocompleteComponent implements OnInit {
       debounceTime(500),
       distinctUntilChanged(),
       map(([value, cities]) => {
-        const options = (cities as ICity[]) || [];
+        const options: ICity[] = (cities as ICity[]) || [];
         const name: string =
           typeof value === 'string' ? value : (value as ICity)?.name;
 
         this.search.emit(name);
-
+        
         return name ? this._filter(name as string, options) : options.slice();
       })
     );

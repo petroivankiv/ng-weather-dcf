@@ -1,7 +1,6 @@
 {
   "name": "ng-weather-dcf",
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -13,8 +12,8 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "extract-i18n": "ng extract-i18n --output-path=src/locale --format=json",
-    "count-lines": "node ./scripts/count-lines.js",
-    "locale": "node ./scripts/locale.js"
+    "count-lines": "node ./scripts/count-lines.mjs",
+    "locale": "node ./scripts/locale.mjs"
   },
   "private": true,
   "dependencies": {
