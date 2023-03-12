@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 const modules = [
   MatButtonModule,
@@ -21,6 +22,7 @@ const modules = [
   MatInputModule,
   MatToolbarModule,
   MatSelectModule,
+  ScrollingModule,
 ];
 
 @NgModule({

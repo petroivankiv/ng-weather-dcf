@@ -7,13 +7,17 @@
       [formControl]="myControl"
       [matAutocomplete]="auto"
     />
-    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-      <mat-option
-        *ngFor="let option of filteredOptions | async"
-        [value]="option"
+    <mat-autocomplete #auto="matAutocomplete" cdkVirtualScrollingElement>
+      <cdk-virtual-scroll-viewport
+        *ngIf="filteredOptions | async as options"
+        appendOnly
+        maxBufferPx="1500"
+        [itemSize]="options.length < 5 ? 50 : 5"
       >
-        {{ option.name }}
-      </mat-option>
+        <mat-option *cdkVirtualFor="let option of options" [value]="option">
+          {{ option.name }}
+        </mat-option>
+      </cdk-virtual-scroll-viewport>
     </mat-autocomplete>
   </mat-form-field>
 </form>

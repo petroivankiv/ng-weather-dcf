@@ -45,7 +45,7 @@ export class AutocompleteComponent implements OnInit {
           typeof value === 'string' ? value : (value as ICity)?.name;
 
         this.search.emit(name);
-        
+
         return name ? this._filter(name as string, options) : options.slice();
       })
     );
